@@ -4,6 +4,8 @@ import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { BooksModule } from './books/books.module.js';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ContactsModule } from './contacts/contacts.module.js';
+import { AdminModule } from './admin/admin.module.js';
 
 @Module({
   imports: [
@@ -24,6 +26,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       }),
     }),
     BooksModule,
+    ContactsModule,
+    AdminModule,
   ],
   controllers: [AppController],
   providers: [AppService],
